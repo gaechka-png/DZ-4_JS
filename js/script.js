@@ -4,10 +4,10 @@ alert(number ** power);
 // -----------------------------------------------
 let firstNumber = +prompt('введите первое число');
 let secondNumber = +prompt('введите второе число');
-alert(firstNumber - secondNumber);
+alert((firstNumber + secondNumber) / 2);
 // -----------------------------------------------
-let logNunber = +prompt('введите длину квадрата для расчета площади');
-alert(logNunber * logNunber);
+let logNum = +prompt('введите длину квадрата для расчета площади');
+alert(logNum * logNum);
 // -----------------------------------------------
 let num1;
 let num2;
