@@ -14,37 +14,29 @@ let num2;
 let out = document.getElementById('out');
 
 function plus() {
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1)
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2)
+    num1 = +(document.getElementById('n1').value);
+    num2 = +(document.getElementById('n2').value);
 
     out.innerHTML = num1 + num2;
 }
 
 function minus() {
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1)
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2)
+    num1 = +(document.getElementById('n1').value);
+    num2 = +(document.getElementById('n2').value);
 
     out.innerHTML = num1 - num2;
 }
 
 function multiplication() {
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1)
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2)
+    num1 = +(document.getElementById('n1').value);
+    num2 = +(document.getElementById('n2').value);
 
     out.innerHTML = num1 * num2;
 }
 
 function division() {
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1)
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2)
+    num1 = +(document.getElementById('n1').value);
+    num2 = +(document.getElementById('n2').value);
 
     out.innerHTML = num1 / num2;
 }
@@ -64,9 +56,13 @@ else {
 // -----------------------------------------------
 let clock = +prompt('введите кол-во часов');
 let minutes = +prompt('введите кол-во минут');
-alert('До завтра:' + (24 - clock) + 'часов' + (60 - minutes) + 'минут');
-// -----------------------------------------------
-let l = +prompt('Введите любое трехзначное число');
+if (minutes === 0)
+    alert('До завтра:' + (24 - clock) + 'часов');
+else
+    alert('До завтра:' + (23 - clock) + 'часов' + (60 - minutes) + 'минут');
+
+-----------------------------------------------
+    let l = +prompt('Введите любое трехзначное число');
 alert(((l % 100) - (l % 10)) / 10);
 // -----------------------------------------------
 let p = Number(prompt('ведите 5 значное'));
